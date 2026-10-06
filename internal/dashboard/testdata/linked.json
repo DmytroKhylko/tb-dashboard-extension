@@ -1,0 +1,1960 @@
+{
+  "title": "Main dashboard",
+  "name": "Main dashboard",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "4bf5faa6-e926-b2a1-067d-3c58ef20d44b": {
+        "typeFullFqn": "system.html_container",
+        "type": "latest",
+        "sizeX": 9.5,
+        "sizeY": 5.5,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(255, 255, 255, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "type": "ANGULAR",
+            "html": "<tb-cd-main-layout [ctx]=\"_ctx\"></tb-cd-main-layout>",
+            "css": "",
+            "js": "this._ctx = ctx;",
+            "resources": [
+              {
+                "url": "http://localhost:5000/static/widgets/thingsboard-extension-widgets.js",
+                "isModule": true
+              }
+            ]
+          },
+          "title": "HTML Container",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "configMode": "basic",
+          "actions": {},
+          "enableDataExport": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4bf5faa6-e926-b2a1-067d-3c58ef20d44b"
+      },
+      "1d58ea05-d772-52a4-a4d5-b1337054a032": {
+        "id": "1d58ea05-d772-52a4-a4d5-b1337054a032",
+        "typeFullFqn": "system.html_container",
+        "type": "latest",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(255, 255, 255, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "type": "ANGULAR",
+            "html": "<tb-cd-company-page [ctx]=\"_ctx\"></tb-cd-company-page>",
+            "css": "",
+            "js": "this._ctx = ctx;",
+            "resources": [
+              {
+                "url": "http://localhost:5000/static/widgets/thingsboard-extension-widgets.js",
+                "isModule": true
+              }
+            ]
+          },
+          "title": "Company page",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "configMode": "basic",
+          "actions": {},
+          "enableDataExport": false
+        }
+      },
+      "3c16a7ae-a999-5495-b7d1-bb3dd62ebcab": {
+        "id": "3c16a7ae-a999-5495-b7d1-bb3dd62ebcab",
+        "typeFullFqn": "system.map",
+        "type": "latest",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "mapType": "geoMap",
+            "layers": [
+              {
+                "label": "{i18n:widgets.maps.layer.roadmap}",
+                "provider": "openstreet",
+                "layerType": "OpenStreetMap.Mapnik"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.satellite}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.hybrid}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery",
+                "referenceLayer": "openstreetmap_hybrid"
+              }
+            ],
+            "imageSource": null,
+            "markers": [],
+            "polygons": [
+              {
+                "dsType": "entity",
+                "dsLabel": "Company zones",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "1cd9b890-8f9d-5429-91b6-5e8eb9494666",
+                "dsFilterId": null,
+                "additionalDataKeys": [],
+                "polygonKey": {
+                  "name": "perimeter",
+                  "label": "perimeter",
+                  "type": "attribute",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "fillType": "color",
+                "fillColor": {
+                  "type": "constant",
+                  "color": "rgba(63, 81, 181, 0.24)"
+                },
+                "strokeColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "strokeWeight": 3,
+                "label": {
+                  "show": true,
+                  "type": "pattern",
+                  "pattern": "${entityName}"
+                },
+                "tooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "pattern",
+                  "pattern": "<b>${entityName}</b>",
+                  "offsetX": 0,
+                  "offsetY": -1
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "edit": {
+                  "enabledActions": [
+                    "add",
+                    "edit",
+                    "move",
+                    "remove"
+                  ],
+                  "attributeScope": "SERVER_SCOPE",
+                  "snappable": false
+                }
+              }
+            ],
+            "circles": [],
+            "polylines": [],
+            "additionalDataSources": [],
+            "controlsPosition": "topleft",
+            "zoomActions": [
+              "scroll",
+              "doubleClick",
+              "controlButtons"
+            ],
+            "scales": [],
+            "dragModeButton": false,
+            "fitMapBounds": true,
+            "useDefaultCenterPosition": false,
+            "defaultCenterPosition": "0,0",
+            "defaultZoomLevel": null,
+            "mapPageSize": 16384,
+            "mapActionButtons": [
+              {
+                "label": "Add zone",
+                "icon": "add",
+                "color": "#0000008A",
+                "action": {
+                  "type": "placeMapItem",
+                  "customHtml": "<tb-cd-zone-form [data]=\"zoneData\" [vm]=\"self\"></tb-cd-zone-form>",
+                  "customCss": "",
+                  "customFunction": "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet params = widgetContext.stateController.getStateParams();\n\ncustomDialog.customDialog(htmlTemplate, ZoneDialogController).subscribe();\n\nfunction ZoneDialogController(instance) {\n    let vm = instance;\n    vm.self = vm;\n    vm.zoneData = {\n        ctx: widgetContext,\n        companyId: params.company ? params.company.entityId : null,\n        perimeter: additionalParams.coordinates\n    };\n}\n",
+                  "customResources": [
+                    {
+                      "url": "http://localhost:5000/static/widgets/thingsboard-extension-widgets.js",
+                      "isModule": true
+                    }
+                  ],
+                  "mapItemType": "polygon",
+                  "mapItemTooltips": {},
+                  "openInSeparateDialog": false,
+                  "openInPopover": false
+                }
+              }
+            ],
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "padding": "8px"
+          },
+          "title": "Zones map",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "configMode": "advanced",
+          "actions": {},
+          "enableDataExport": false
+        }
+      },
+      "71e64597-35cb-55d7-bd8b-8527047abfed": {
+        "id": "71e64597-35cb-55d7-bd8b-8527047abfed",
+        "typeFullFqn": "system.html_container",
+        "type": "latest",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(255, 255, 255, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "type": "ANGULAR",
+            "html": "<tb-cd-zone-page [ctx]=\"_ctx\"></tb-cd-zone-page>",
+            "css": "",
+            "js": "this._ctx = ctx;",
+            "resources": [
+              {
+                "url": "http://localhost:5000/static/widgets/thingsboard-extension-widgets.js",
+                "isModule": true
+              }
+            ]
+          },
+          "title": "Zone page",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "configMode": "basic",
+          "actions": {},
+          "enableDataExport": false
+        }
+      },
+      "479b51cc-959e-5690-aa44-4c3aed6b9495": {
+        "id": "479b51cc-959e-5690-aa44-4c3aed6b9495",
+        "typeFullFqn": "system.map",
+        "type": "latest",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "mapType": "geoMap",
+            "layers": [
+              {
+                "label": "{i18n:widgets.maps.layer.roadmap}",
+                "provider": "openstreet",
+                "layerType": "OpenStreetMap.Mapnik"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.satellite}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.hybrid}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery",
+                "referenceLayer": "openstreetmap_hybrid"
+              }
+            ],
+            "imageSource": null,
+            "markers": [
+              {
+                "dsType": "entity",
+                "dsLabel": "Zone collars",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "20175841-1ddb-5243-bdc4-60f0fdeec35f",
+                "dsFilterId": null,
+                "additionalDataSources": null,
+                "additionalDataKeys": [],
+                "label": {
+                  "show": true,
+                  "type": "function",
+                  "pattern": "${entityName}",
+                  "patternFunction": "let COLLAR_ID_KEY = 'collarId';\n\nlet value = null;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[COLLAR_ID_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    value = rowValue;\n}\n\nreturn value || data.deviceName;\n"
+                },
+                "tooltip": {
+                  "show": true,
+                  "type": "function",
+                  "pattern": "<b>${entityName}</b>",
+                  "patternFunction": "let COLLAR_ID_KEY = 'collarId';\n\nlet value = null;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[COLLAR_ID_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    value = rowValue;\n}\n\nreturn value || data.deviceName;\n",
+                  "trigger": "click",
+                  "autoclose": true,
+                  "offsetX": 0,
+                  "offsetY": -1,
+                  "tagActions": null
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "groups": null,
+                "edit": {
+                  "enabledActions": [],
+                  "attributeScope": "SERVER_SCOPE",
+                  "snappable": false
+                },
+                "xKey": {
+                  "name": "latitude",
+                  "label": "latitude",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "yKey": {
+                  "name": "longitude",
+                  "label": "longitude",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "markerType": "image",
+                "markerShape": {
+                  "shape": "markerShape1",
+                  "size": 34,
+                  "color": {
+                    "type": "constant",
+                    "color": "#3F51B5"
+                  }
+                },
+                "markerIcon": {
+                  "iconContainer": "iconContainer1",
+                  "icon": "mdi:lightbulb-on",
+                  "size": 48,
+                  "color": {
+                    "type": "constant",
+                    "color": "#307FE5"
+                  }
+                },
+                "markerImage": {
+                  "type": "function",
+                  "image": "/assets/markers/shape1.svg",
+                  "imageSize": 34,
+                  "imageFunction": "let MOVEMENT_ABSENT_KEY = 'movementAbsent';\nlet MARKER_SIZE = 34;\n\nlet value = null;\nlet valueTs = -1;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[MOVEMENT_ABSENT_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    let rowTs = row[MOVEMENT_ABSENT_KEY + '|ts'] || 0;\n    if (rowTs >= valueTs) {\n        value = rowValue;\n        valueTs = rowTs;\n    }\n}\n\nlet movementAbsent = value === true || value === 'true';\n\nreturn {\n    url: images[movementAbsent ? 2 : 0] || images[0],\n    size: MARKER_SIZE\n};",
+                  "images": [
+                    "tb-image;/api/images/tenant/animal-ok.svg",
+                    "tb-image;/api/images/tenant/animal-alert.svg",
+                    "tb-image;/api/images/tenant/animal-not-moving.svg"
+                  ]
+                },
+                "markerOffsetX": 0.5,
+                "markerOffsetY": 1,
+                "markerClustering": {
+                  "enable": false,
+                  "zoomOnClick": true,
+                  "maxZoom": null,
+                  "maxClusterRadius": 80,
+                  "zoomAnimation": true,
+                  "showCoverageOnHover": true,
+                  "spiderfyOnMaxZoom": false,
+                  "chunkedLoad": false,
+                  "lazyLoad": true,
+                  "useClusterMarkerColorFunction": false,
+                  "clusterMarkerColorFunction": null
+                }
+              }
+            ],
+            "polygons": [
+              {
+                "dsType": "entity",
+                "dsLabel": "Selected zone",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "33bc92e5-7556-5cd0-a7ac-4cc76746a6af",
+                "dsFilterId": null,
+                "additionalDataKeys": [],
+                "polygonKey": {
+                  "name": "perimeter",
+                  "label": "perimeter",
+                  "type": "attribute",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "fillType": "color",
+                "fillColor": {
+                  "type": "constant",
+                  "color": "rgba(63, 81, 181, 0.24)"
+                },
+                "strokeColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "strokeWeight": 3,
+                "label": {
+                  "show": true,
+                  "type": "pattern",
+                  "pattern": "${entityName}"
+                },
+                "tooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "pattern",
+                  "pattern": "<b>${entityName}</b>",
+                  "offsetX": 0,
+                  "offsetY": -1
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "edit": {
+                  "enabledActions": [],
+                  "attributeScope": "SERVER_SCOPE",
+                  "snappable": false
+                }
+              }
+            ],
+            "circles": [],
+            "polylines": [],
+            "additionalDataSources": [
+              {
+                "dsType": "entity",
+                "dsLabel": "",
+                "dataKeys": [
+                  {
+                    "name": "movementAbsent",
+                    "type": "attribute",
+                    "label": "movementAbsent",
+                    "color": "#2196f3",
+                    "settings": {}
+                  },
+                  {
+                    "name": "collarId",
+                    "type": "attribute",
+                    "label": "collarId",
+                    "color": "#2196f3",
+                    "settings": {}
+                  }
+                ],
+                "dsEntityAliasId": "20175841-1ddb-5243-bdc4-60f0fdeec35f"
+              }
+            ],
+            "controlsPosition": "topleft",
+            "zoomActions": [
+              "scroll",
+              "doubleClick",
+              "controlButtons"
+            ],
+            "scales": [],
+            "dragModeButton": false,
+            "fitMapBounds": true,
+            "useDefaultCenterPosition": false,
+            "defaultCenterPosition": "0,0",
+            "defaultZoomLevel": null,
+            "mapPageSize": 16384,
+            "mapActionButtons": [],
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "padding": "8px"
+          },
+          "title": "Zone map",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "configMode": "advanced",
+          "actions": {},
+          "enableDataExport": false
+        }
+      },
+      "0a353003-de3d-560d-8d02-7e8554e8b507": {
+        "id": "0a353003-de3d-560d-8d02-7e8554e8b507",
+        "typeFullFqn": "system.html_container",
+        "type": "latest",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(255, 255, 255, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "type": "ANGULAR",
+            "html": "<tb-cd-collar-page [ctx]=\"_ctx\"></tb-cd-collar-page>",
+            "css": "",
+            "js": "this._ctx = ctx;",
+            "resources": [
+              {
+                "url": "http://localhost:5000/static/widgets/thingsboard-extension-widgets.js",
+                "isModule": true
+              }
+            ]
+          },
+          "title": "Collar page",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "configMode": "basic",
+          "actions": {},
+          "enableDataExport": false
+        }
+      },
+      "6ac9f90e-72f3-5162-9406-521ecb311c0e": {
+        "id": "6ac9f90e-72f3-5162-9406-521ecb311c0e",
+        "typeFullFqn": "system.trip_map",
+        "type": "timeseries",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "selectedTab": 1,
+            "history": {
+              "historyType": 0,
+              "timewindowMs": 2592000000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "mapType": "geoMap",
+            "layers": [
+              {
+                "label": "{i18n:widgets.maps.layer.roadmap}",
+                "provider": "openstreet",
+                "layerType": "OpenStreetMap.Mapnik"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.satellite}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.hybrid}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery",
+                "referenceLayer": "openstreetmap_hybrid"
+              }
+            ],
+            "imageSource": null,
+            "markers": [],
+            "polygons": [
+              {
+                "dsType": "entity",
+                "dsLabel": "Collar zones",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "5d0000bc-41a8-5821-90db-21583c74d3d3",
+                "dsFilterId": null,
+                "additionalDataKeys": [],
+                "polygonKey": {
+                  "name": "perimeter",
+                  "label": "perimeter",
+                  "type": "attribute",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "fillType": "color",
+                "fillColor": {
+                  "type": "constant",
+                  "color": "rgba(63, 81, 181, 0.24)"
+                },
+                "strokeColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "strokeWeight": 3,
+                "label": {
+                  "show": true,
+                  "type": "pattern",
+                  "pattern": "${entityName}"
+                },
+                "tooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "pattern",
+                  "pattern": "<b>${entityName}</b>",
+                  "offsetX": 0,
+                  "offsetY": -1
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "edit": {
+                  "enabledActions": [],
+                  "attributeScope": "SERVER_SCOPE",
+                  "snappable": false
+                }
+              }
+            ],
+            "circles": [],
+            "polylines": [],
+            "additionalDataSources": [
+              {
+                "dsType": "entity",
+                "dsLabel": "",
+                "dataKeys": [
+                  {
+                    "name": "movementAbsent",
+                    "type": "attribute",
+                    "label": "movementAbsent",
+                    "color": "#2196f3",
+                    "settings": {}
+                  },
+                  {
+                    "name": "collarId",
+                    "type": "attribute",
+                    "label": "collarId",
+                    "color": "#2196f3",
+                    "settings": {}
+                  }
+                ],
+                "dsEntityAliasId": "4e25d9f9-0d24-5e99-8e91-792f2272a95a"
+              }
+            ],
+            "controlsPosition": "topleft",
+            "zoomActions": [
+              "scroll",
+              "doubleClick",
+              "controlButtons"
+            ],
+            "scales": [],
+            "dragModeButton": false,
+            "fitMapBounds": true,
+            "useDefaultCenterPosition": false,
+            "defaultCenterPosition": "0,0",
+            "defaultZoomLevel": null,
+            "mapPageSize": 16384,
+            "mapActionButtons": [],
+            "trips": [
+              {
+                "dsType": "entity",
+                "dsLabel": "Selected collar",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "4e25d9f9-0d24-5e99-8e91-792f2272a95a",
+                "dsFilterId": null,
+                "additionalDataSources": null,
+                "additionalDataKeys": [
+                  {
+                    "name": "batteryStateOfCharge",
+                    "type": "timeseries",
+                    "label": "batteryStateOfCharge",
+                    "color": "#2196f3",
+                    "settings": {}
+                  }
+                ],
+                "label": {
+                  "show": false,
+                  "type": "pattern",
+                  "pattern": "${entityName}"
+                },
+                "tooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "function",
+                  "pattern": "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Battery:</b> ${batteryStateOfCharge}",
+                  "offsetX": 0,
+                  "offsetY": -0.5,
+                  "patternFunction": "let COLLAR_ID_KEY = 'collarId';\n\nlet value = null;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[COLLAR_ID_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    value = rowValue;\n}\n\nreturn value || data.deviceName;\n",
+                  "tagActions": null
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "groups": null,
+                "xKey": {
+                  "name": "latitude",
+                  "label": "latitude",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "yKey": {
+                  "name": "longitude",
+                  "label": "longitude",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "showMarker": true,
+                "markerType": "image",
+                "markerShape": {
+                  "shape": "tripMarkerShape1",
+                  "size": 34,
+                  "color": {
+                    "type": "constant",
+                    "color": "#3F51B5"
+                  }
+                },
+                "markerIcon": {
+                  "iconContainer": "tripIconContainer1",
+                  "icon": "arrow_forward",
+                  "size": 48,
+                  "color": {
+                    "type": "constant",
+                    "color": "#3F51B5"
+                  }
+                },
+                "markerImage": {
+                  "type": "function",
+                  "image": "/assets/markers/tripShape2.svg",
+                  "imageSize": 34,
+                  "imageFunction": "let MOVEMENT_ABSENT_KEY = 'movementAbsent';\nlet MARKER_SIZE = 34;\n\nlet value = null;\nlet valueTs = -1;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[MOVEMENT_ABSENT_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    let rowTs = row[MOVEMENT_ABSENT_KEY + '|ts'] || 0;\n    if (rowTs >= valueTs) {\n        value = rowValue;\n        valueTs = rowTs;\n    }\n}\n\nlet movementAbsent = value === true || value === 'true';\n\nreturn {\n    url: images[movementAbsent ? 2 : 0] || images[0],\n    size: MARKER_SIZE\n};",
+                  "images": [
+                    "tb-image;/api/images/tenant/animal-ok.svg",
+                    "tb-image;/api/images/tenant/animal-alert.svg",
+                    "tb-image;/api/images/tenant/animal-not-moving.svg"
+                  ]
+                },
+                "markerOffsetX": 0.5,
+                "markerOffsetY": 0.5,
+                "rotateMarker": false,
+                "offsetAngle": 0,
+                "showPath": true,
+                "pathStrokeWeight": 2,
+                "pathStrokeColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "usePathDecorator": true,
+                "pathDecoratorSymbol": "arrowHead",
+                "pathDecoratorSymbolSize": 10,
+                "pathDecoratorSymbolColor": "#3F51B5",
+                "pathDecoratorOffset": 20,
+                "pathEndDecoratorOffset": 20,
+                "pathDecoratorRepeat": 20,
+                "showPoints": true,
+                "pointSize": 6,
+                "pointColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "pointTooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "pattern",
+                  "pattern": "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Battery:</b> ${batteryStateOfCharge}",
+                  "offsetX": 0,
+                  "offsetY": -1
+                }
+              }
+            ],
+            "tripTimeline": {
+              "showTimelineControl": true,
+              "timeStep": 1000,
+              "speedOptions": [
+                1,
+                5,
+                10,
+                15,
+                25
+              ],
+              "showTimestamp": true,
+              "timestampFormat": {
+                "format": "yyyy-MM-dd HH:mm:ss",
+                "lastUpdateAgo": false,
+                "custom": false,
+                "auto": false
+              },
+              "snapToRealLocation": false,
+              "locationSnapFilter": "return true;"
+            },
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "padding": "8px"
+          },
+          "title": "Collar route",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": null,
+          "mobileHeight": null,
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "assistant_navigation",
+          "iconColor": "#1F6BDD",
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "titleFont": {
+            "size": null,
+            "sizeUnit": "px",
+            "family": null,
+            "weight": null,
+            "style": null,
+            "lineHeight": null
+          },
+          "titleColor": null,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "units": "",
+          "decimals": null,
+          "noDataDisplayMessage": "",
+          "timewindowStyle": {
+            "showIcon": false,
+            "iconSize": "24px",
+            "icon": null,
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": "Roboto",
+              "weight": "400",
+              "style": "normal",
+              "lineHeight": "16px"
+            },
+            "color": "rgba(0, 0, 0, 0.38)",
+            "displayTypePrefix": true
+          },
+          "margin": "0px",
+          "borderRadius": "0px",
+          "iconSize": "24px",
+          "enableDataExport": false
+        }
+      },
+      "13fc513d-a60e-57e0-a734-2957d7f8fd46": {
+        "id": "13fc513d-a60e-57e0-a734-2957d7f8fd46",
+        "typeFullFqn": "system.cards.timeseries_table",
+        "type": "timeseries",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "4e25d9f9-0d24-5e99-8e91-792f2272a95a",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "latitude",
+                  "type": "timeseries",
+                  "label": "Latitude",
+                  "color": "#2196f3",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "if (value === null || value === undefined || value === '') { return ''; }\nreturn Number(value).toFixed(6);",
+                    "useCellContentFunctionOnExport": true,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled"
+                  }
+                },
+                {
+                  "name": "longitude",
+                  "type": "timeseries",
+                  "label": "Longitude",
+                  "color": "#2196f3",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "if (value === null || value === undefined || value === '') { return ''; }\nreturn Number(value).toFixed(6);",
+                    "useCellContentFunctionOnExport": true,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled"
+                  }
+                },
+                {
+                  "name": "batteryStateOfCharge",
+                  "type": "timeseries",
+                  "label": "Battery level",
+                  "color": "#2196f3",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "if (value === null || value === undefined || value === '') { return ''; }\nreturn value + '%';",
+                    "useCellContentFunctionOnExport": true,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled"
+                  }
+                },
+                {
+                  "name": "ambientTemperature",
+                  "type": "timeseries",
+                  "label": "Ambient temperature",
+                  "color": "#2196f3",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "if (value === null || value === undefined || value === '') { return ''; }\nreturn value + ' &deg;C';",
+                    "useCellContentFunctionOnExport": true,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled"
+                  }
+                }
+              ]
+            }
+          ],
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "enableSearch": true,
+            "enableSelectColumnDisplay": true,
+            "enableStickyHeader": true,
+            "enableStickyAction": true,
+            "showCellActionsMenu": true,
+            "reserveSpaceForHiddenAction": "true",
+            "showTimestamp": true,
+            "dateFormat": {
+              "format": "yyyy-MM-dd HH:mm:ss"
+            },
+            "displayPagination": true,
+            "useEntityLabel": false,
+            "defaultPageSize": 10,
+            "pageStepCount": 3,
+            "pageStepIncrement": 10,
+            "hideEmptyLines": false,
+            "disableStickyHeader": false,
+            "useRowStyleFunction": false,
+            "rowStyleFunction": "",
+            "sortOrder": {
+              "property": "createdTime",
+              "direction": "DESC"
+            }
+          },
+          "title": "History analytics",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "widgetStyle": {},
+          "actions": {},
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "configMode": "advanced",
+          "titleFont": null,
+          "titleColor": null,
+          "titleIcon": null,
+          "displayTimewindow": true,
+          "timewindow": {
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 2592000000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 50000
+            }
+          }
+        }
+      },
+      "224672ab-9774-c479-d57a-ce17a003ad7b": {
+        "id": "224672ab-9774-c479-d57a-ce17a003ad7b",
+        "typeFullFqn": "system.trip_map",
+        "type": "timeseries",
+        "sizeX": 24,
+        "sizeY": 11,
+        "row": 0,
+        "col": 0,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "selectedTab": 1,
+            "history": {
+              "historyType": 0,
+              "timewindowMs": 86400000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "mapType": "geoMap",
+            "layers": [
+              {
+                "label": "{i18n:widgets.maps.layer.roadmap}",
+                "provider": "openstreet",
+                "layerType": "OpenStreetMap.Mapnik"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.satellite}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery"
+              },
+              {
+                "label": "{i18n:widgets.maps.layer.hybrid}",
+                "provider": "openstreet",
+                "layerType": "Esri.WorldImagery",
+                "referenceLayer": "openstreetmap_hybrid"
+              }
+            ],
+            "imageSource": null,
+            "markers": [
+              {
+                "dsType": "entity",
+                "dsLabel": "se",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "c14add70-76b3-5806-8d05-420f4cb4ccaf",
+                "dsFilterId": "9d6dfc5d-0993-c278-aab6-6a0f8f3adaef",
+                "additionalDataSources": null,
+                "additionalDataKeys": null,
+                "label": {
+                  "show": true,
+                  "type": "function",
+                  "pattern": "${entityName}",
+                  "patternFunction": "let COLLAR_ID_KEY = 'collarId';\n\nlet value = null;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[COLLAR_ID_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    value = rowValue;\n}\n\nreturn value || data.deviceName;\n"
+                },
+                "tooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "function",
+                  "pattern": "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Temperature:</b> ${temperature} °C<br/><small>See tooltip settings for details</small>",
+                  "offsetX": 0,
+                  "offsetY": -1,
+                  "patternFunction": "let COLLAR_ID_KEY = 'collarId';\n\nlet value = null;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[COLLAR_ID_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    value = rowValue;\n}\n\nreturn value || data.deviceName;\n",
+                  "tagActions": null
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "groups": null,
+                "edit": {
+                  "enabledActions": [],
+                  "attributeScope": "SERVER_SCOPE",
+                  "snappable": false
+                },
+                "xKey": {
+                  "name": "latitude",
+                  "type": "timeseries",
+                  "label": "latitude",
+                  "color": "#2196f3",
+                  "settings": {}
+                },
+                "yKey": {
+                  "name": "longitude",
+                  "type": "timeseries",
+                  "label": "longitude",
+                  "color": "#2196f3",
+                  "settings": {}
+                },
+                "markerType": "image",
+                "markerShape": {
+                  "shape": "markerShape1",
+                  "size": 34,
+                  "color": {
+                    "type": "constant",
+                    "color": "#307FE5"
+                  }
+                },
+                "markerIcon": {
+                  "iconContainer": "iconContainer1",
+                  "icon": "mdi:lightbulb-on",
+                  "size": 48,
+                  "color": {
+                    "type": "constant",
+                    "color": "#307FE5"
+                  }
+                },
+                "markerImage": {
+                  "type": "function",
+                  "image": "/assets/markers/shape1.svg",
+                  "imageSize": 34,
+                  "imageFunction": "let MOVEMENT_ABSENT_KEY = 'movementAbsent';\nlet MARKER_SIZE = 34;\n\nlet value = null;\nlet valueTs = -1;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[MOVEMENT_ABSENT_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    let rowTs = row[MOVEMENT_ABSENT_KEY + '|ts'] || 0;\n    if (rowTs >= valueTs) {\n        value = rowValue;\n        valueTs = rowTs;\n    }\n}\n\nlet movementAbsent = value === true || value === 'true';\n\nreturn {\n    url: images[movementAbsent ? 2 : 0] || images[0],\n    size: MARKER_SIZE\n};",
+                  "images": [
+                    "tb-image;/api/images/tenant/animal-ok.svg",
+                    "tb-image;/api/images/tenant/animal-alert.svg",
+                    "tb-image;/api/images/tenant/animal-not-moving.svg"
+                  ]
+                },
+                "markerOffsetX": 0.5,
+                "markerOffsetY": 1,
+                "markerClustering": {
+                  "enable": false,
+                  "zoomOnClick": true,
+                  "maxZoom": null,
+                  "maxClusterRadius": 80,
+                  "zoomAnimation": true,
+                  "showCoverageOnHover": true,
+                  "spiderfyOnMaxZoom": false,
+                  "chunkedLoad": false,
+                  "lazyLoad": true,
+                  "useClusterMarkerColorFunction": false,
+                  "clusterMarkerColorFunction": null
+                }
+              }
+            ],
+            "polygons": [
+              {
+                "dsType": "entity",
+                "dsLabel": "Collar zones",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "1cd9b890-8f9d-5429-91b6-5e8eb9494666",
+                "dsFilterId": null,
+                "additionalDataKeys": [],
+                "polygonKey": {
+                  "name": "perimeter",
+                  "label": "perimeter",
+                  "type": "attribute",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "fillType": "color",
+                "fillColor": {
+                  "type": "constant",
+                  "color": "rgba(63, 81, 181, 0.24)"
+                },
+                "strokeColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "strokeWeight": 3,
+                "label": {
+                  "show": true,
+                  "type": "pattern",
+                  "pattern": "${entityName}"
+                },
+                "tooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "pattern",
+                  "pattern": "<b>${entityName}</b>",
+                  "offsetX": 0,
+                  "offsetY": -1
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "edit": {
+                  "enabledActions": [],
+                  "attributeScope": "SERVER_SCOPE",
+                  "snappable": false
+                }
+              }
+            ],
+            "circles": [],
+            "polylines": [],
+            "additionalDataSources": [
+              {
+                "dsType": "entity",
+                "dsLabel": "",
+                "dataKeys": [
+                  {
+                    "name": "movementAbsent",
+                    "type": "attribute",
+                    "label": "movementAbsent",
+                    "color": "#2196f3",
+                    "settings": {}
+                  },
+                  {
+                    "name": "collarId",
+                    "type": "attribute",
+                    "label": "collarId",
+                    "color": "#2196f3",
+                    "settings": {}
+                  }
+                ],
+                "dsEntityAliasId": "c14add70-76b3-5806-8d05-420f4cb4ccaf"
+              }
+            ],
+            "controlsPosition": "topleft",
+            "zoomActions": [
+              "scroll",
+              "doubleClick",
+              "controlButtons"
+            ],
+            "scales": [],
+            "dragModeButton": false,
+            "fitMapBounds": true,
+            "useDefaultCenterPosition": false,
+            "defaultCenterPosition": "0,0",
+            "defaultZoomLevel": null,
+            "mapPageSize": 16384,
+            "mapActionButtons": [],
+            "trips": [
+              {
+                "dsType": "entity",
+                "dsLabel": "Selected collar",
+                "dsDeviceId": null,
+                "dsEntityAliasId": "c14add70-76b3-5806-8d05-420f4cb4ccaf",
+                "dsFilterId": "9d6dfc5d-0993-c278-aab6-6a0f8f3adaef",
+                "additionalDataSources": null,
+                "additionalDataKeys": [
+                  {
+                    "name": "batteryStateOfCharge",
+                    "type": "timeseries",
+                    "label": "batteryStateOfCharge",
+                    "color": "#2196f3",
+                    "settings": {}
+                  }
+                ],
+                "label": {
+                  "show": false,
+                  "type": "pattern",
+                  "pattern": "${entityName}"
+                },
+                "tooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "function",
+                  "pattern": "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Battery:</b> ${batteryStateOfCharge}",
+                  "offsetX": 0,
+                  "offsetY": -0.5,
+                  "patternFunction": "let COLLAR_ID_KEY = 'collarId';\n\nlet value = null;\nlet rows = [data].concat(dsData || []);\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i];\n    if (!row || row.entityId !== data.entityId) {\n        continue;\n    }\n    let rowValue = row[COLLAR_ID_KEY];\n    if (rowValue === undefined || rowValue === null || rowValue === '') {\n        continue;\n    }\n    value = rowValue;\n}\n\nreturn value || data.deviceName;\n",
+                  "tagActions": null
+                },
+                "click": {
+                  "type": "doNothing"
+                },
+                "groups": null,
+                "xKey": {
+                  "name": "latitude",
+                  "label": "latitude",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "yKey": {
+                  "name": "longitude",
+                  "label": "longitude",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#2196f3"
+                },
+                "showMarker": true,
+                "markerType": "image",
+                "markerShape": {
+                  "shape": "tripMarkerShape1",
+                  "size": 34,
+                  "color": {
+                    "type": "constant",
+                    "color": "#3F51B5"
+                  }
+                },
+                "markerIcon": {
+                  "iconContainer": "tripIconContainer1",
+                  "icon": "arrow_forward",
+                  "size": 48,
+                  "color": {
+                    "type": "constant",
+                    "color": "#3F51B5"
+                  }
+                },
+                "markerImage": {
+                  "type": "function",
+                  "image": "/assets/markers/tripShape2.svg",
+                  "imageSize": 34,
+                  "imageFunction": "return {\n    url: images[0],\n    size: 20\n}",
+                  "images": [
+                    "tb-image;/api/images/tenant/animal-footprint.svg"
+                  ]
+                },
+                "markerOffsetX": 0.5,
+                "markerOffsetY": 0.5,
+                "rotateMarker": false,
+                "offsetAngle": 0,
+                "showPath": true,
+                "pathStrokeWeight": 2,
+                "pathStrokeColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "usePathDecorator": true,
+                "pathDecoratorSymbol": "arrowHead",
+                "pathDecoratorSymbolSize": 10,
+                "pathDecoratorSymbolColor": "#3F51B5",
+                "pathDecoratorOffset": 20,
+                "pathEndDecoratorOffset": 20,
+                "pathDecoratorRepeat": 20,
+                "showPoints": true,
+                "pointSize": 6,
+                "pointColor": {
+                  "type": "constant",
+                  "color": "#3F51B5"
+                },
+                "pointTooltip": {
+                  "show": true,
+                  "trigger": "click",
+                  "autoclose": true,
+                  "type": "pattern",
+                  "pattern": "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}<br/><b>Battery:</b> ${batteryStateOfCharge}",
+                  "offsetX": 0,
+                  "offsetY": -1
+                }
+              }
+            ],
+            "tripTimeline": {
+              "showTimelineControl": true,
+              "timeStep": 1000,
+              "speedOptions": [
+                1,
+                5,
+                10,
+                15,
+                25
+              ],
+              "showTimestamp": true,
+              "timestampFormat": {
+                "format": "yyyy-MM-dd HH:mm:ss",
+                "lastUpdateAgo": false,
+                "custom": false,
+                "auto": false
+              },
+              "snapToRealLocation": false,
+              "locationSnapFilter": "return true;"
+            },
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "padding": "8px"
+          },
+          "title": "Collar route",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": null,
+          "mobileHeight": null,
+          "configMode": "advanced",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "assistant_navigation",
+          "iconColor": "#1F6BDD",
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "titleFont": {
+            "size": null,
+            "sizeUnit": "px",
+            "family": null,
+            "weight": null,
+            "style": null,
+            "lineHeight": null
+          },
+          "titleColor": null,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "units": "",
+          "decimals": null,
+          "noDataDisplayMessage": "",
+          "timewindowStyle": {
+            "showIcon": false,
+            "iconSize": "24px",
+            "icon": null,
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": "Roboto",
+              "weight": "400",
+              "style": "normal",
+              "lineHeight": "16px"
+            },
+            "color": "rgba(0, 0, 0, 0.38)",
+            "displayTypePrefix": true
+          },
+          "margin": "0px",
+          "borderRadius": "0px",
+          "iconSize": "24px",
+          "enableDataExport": false
+        }
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Home",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "4bf5faa6-e926-b2a1-067d-3c58ef20d44b": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": true,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "company": {
+        "name": "${company:entityName}",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "1d58ea05-d772-52a4-a4d5-b1337054a032": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": true,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "company_map": {
+        "name": "Company map",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "224672ab-9774-c479-d57a-ce17a003ad7b": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "mobileHeight": null,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#ffffff",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "company_zones_map": {
+        "name": "Company zones map",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "3c16a7ae-a999-5495-b7d1-bb3dd62ebcab": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#ffffff",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "zone": {
+        "name": "${zone:entityName}",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "71e64597-35cb-55d7-bd8b-8527047abfed": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": true,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "zone_map": {
+        "name": "Zone map",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "479b51cc-959e-5690-aa44-4c3aed6b9495": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#ffffff",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "collar": {
+        "name": "${collar:entityName}",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "0a353003-de3d-560d-8d02-7e8554e8b507": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": true,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "collar_map": {
+        "name": "Collar route map",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "6ac9f90e-72f3-5162-9406-521ecb311c0e": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#ffffff",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "collar_history": {
+        "name": "Collar history",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "13fc513d-a60e-57e0-a734-2957d7f8fd46": {
+                "sizeX": 24,
+                "sizeY": 11,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#ffffff",
+              "columns": 24,
+              "margin": 0,
+              "outerMargin": false,
+              "backgroundSizeMode": "100%",
+              "minColumns": 24,
+              "viewFormat": "grid",
+              "autoFillHeight": true,
+              "rowHeight": 70,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "6a224bf0-967f-55fa-9fa8-9b34ed7af0ae": {
+        "id": "6a224bf0-967f-55fa-9fa8-9b34ed7af0ae",
+        "alias": "Selected company",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": "company",
+          "defaultStateEntity": null
+        }
+      },
+      "c14add70-76b3-5806-8d05-420f4cb4ccaf": {
+        "id": "c14add70-76b3-5806-8d05-420f4cb4ccaf",
+        "alias": "Company collars",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": true,
+          "stateEntityParamName": "company",
+          "defaultStateEntity": null,
+          "rootEntity": null,
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "fromCompanyToCollar",
+              "entityTypes": [
+                "DEVICE"
+              ],
+              "negate": false
+            }
+          ]
+        }
+      },
+      "1cd9b890-8f9d-5429-91b6-5e8eb9494666": {
+        "id": "1cd9b890-8f9d-5429-91b6-5e8eb9494666",
+        "alias": "Company zones",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": true,
+          "stateEntityParamName": "company",
+          "defaultStateEntity": null,
+          "rootEntity": null,
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "fromCompanyToZone",
+              "entityTypes": [
+                "ASSET"
+              ],
+              "negate": false
+            }
+          ]
+        }
+      },
+      "33bc92e5-7556-5cd0-a7ac-4cc76746a6af": {
+        "id": "33bc92e5-7556-5cd0-a7ac-4cc76746a6af",
+        "alias": "Selected zone",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": "zone",
+          "defaultStateEntity": null
+        }
+      },
+      "20175841-1ddb-5243-bdc4-60f0fdeec35f": {
+        "id": "20175841-1ddb-5243-bdc4-60f0fdeec35f",
+        "alias": "Zone collars",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": true,
+          "stateEntityParamName": "zone",
+          "defaultStateEntity": null,
+          "rootEntity": null,
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "fromZoneToCollar",
+              "entityTypes": [
+                "DEVICE"
+              ],
+              "negate": false
+            }
+          ]
+        }
+      },
+      "4e25d9f9-0d24-5e99-8e91-792f2272a95a": {
+        "id": "4e25d9f9-0d24-5e99-8e91-792f2272a95a",
+        "alias": "Selected collar",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": "collar",
+          "defaultStateEntity": null
+        }
+      },
+      "5d0000bc-41a8-5821-90db-21583c74d3d3": {
+        "id": "5d0000bc-41a8-5821-90db-21583c74d3d3",
+        "alias": "Collar zones",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": true,
+          "stateEntityParamName": "collar",
+          "defaultStateEntity": null,
+          "rootEntity": null,
+          "direction": "TO",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "fromZoneToCollar",
+              "entityTypes": [
+                "ASSET"
+              ],
+              "negate": false
+            }
+          ]
+        }
+      }
+    },
+    "filters": {
+      "9d6dfc5d-0993-c278-aab6-6a0f8f3adaef": {
+        "id": "9d6dfc5d-0993-c278-aab6-6a0f8f3adaef",
+        "filter": "Hidden map collars",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "name"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "NOT_IN",
+                  "value": {
+                    "defaultValue": ""
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0,
+                  "unit": ""
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      }
+    },
+    "timewindow": {
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "timewindowMs": 3600000
+      },
+      "aggregation": {
+        "type": "NONE",
+        "limit": 50000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": true,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "hideToolbar": false,
+      "showFilters": false,
+      "showUpdateDashboardImage": false,
+      "showConfigureWithAi": false
+    }
+  },
+  "resources": [
+    {
+      "link": "/api/images/tenant/animal-alert.svg",
+      "title": "animal-alert",
+      "type": "IMAGE",
+      "subType": "IMAGE",
+      "fileName": "animal-alert.svg",
+      "publicResourceKey": "Qds9pC4KjknO5iNHhNo7rQtqy2bBejlK",
+      "mediaType": "image/svg+xml",
+      "data": "PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iMTYiIGZpbGw9IiNEMzJGMkYiLz4KPHBhdGggZD0iTTE5LjYzIDE4LjA3NzVDMTkuNDM1IDE3LjkzNSAxOS4xNjUgMTcuNjA1IDE5LjAzNzUgMTcuNDQ3NUMxOS45MyAxNi4xOTUgMjEuMjUgMTMuODQgMjEuMjUgMTAuOTM3NUMyMS4yNSA5LjQ3NSAyMC42OTUgOC42ODc1IDE5Ljc1IDguNjg3NUMxOC41OTUgOC42ODc1IDE2Ljc4IDEwLjIzMjUgMTYgMTMuMTY1QzE1LjIyIDEwLjIzMjUgMTMuNDA1IDguNjg3NSAxMi4yNSA4LjY4NzVDMTEuMzA1IDguNjg3NSAxMC43NSA5LjQ3NSAxMC43NSAxMC45Mzc1QzEwLjc1IDEzLjg0IDEyLjA3IDE2LjE5NSAxMi45NjI1IDE3LjQ0NzVDMTIuODM1IDE3LjYwNSAxMi41NjUgMTcuOTM1IDEyLjM3IDE4LjA3NzVDMTEuOTk1IDE4LjM4NSAxMS4xMjUgMTkuMTA1IDExLjEyNSAyMC4zMTI1QzExLjEyNSAyMS45NyAxMi40Njc1IDIzLjMxMjUgMTQuMTI1IDIzLjMxMjVDMTUuMjg3NSAyMy4zMTI1IDE2IDIyLjg5MjUgMTYgMjIuODkyNUMxNiAyMi44OTI1IDE2LjcxMjUgMjMuMzEyNSAxNy44NzUgMjMuMzEyNUMxOS41MzI1IDIzLjMxMjUgMjAuODc1IDIxLjk3IDIwLjg3NSAyMC4zMTI1QzIwLjg3NSAxOS4xMDUgMjAuMDA1IDE4LjM4NSAxOS42MyAxOC4wNzc1Wk0xNC4wMTI1IDE2LjMzNzVDMTMuMjU1IDE1LjIxMjUgMTIuMjUgMTMuMjc3NSAxMi4yNSAxMC45Mzc1QzEyLjI1IDEwLjU3IDEyLjI5NSAxMC4zMzc1IDEyLjM0IDEwLjIxQzEzLjA0NSAxMC40NDI1IDE0Ljc3IDEyLjI0MjUgMTQuODc1IDE1Ljk0QzE0LjUyMjUgMTYuMDMgMTQuMjQ1IDE2LjE2NSAxNC4wMTI1IDE2LjMzNzVaTTE0Ljg3NSAxOS43NUMxNC42NjUgMTkuNzUgMTQuNSAxOS40OTUgMTQuNSAxOS4xODc1QzE0LjUgMTguODggMTQuNjY1IDE4LjYyNSAxNC44NzUgMTguNjI1QzE1LjA4NSAxOC42MjUgMTUuMjUgMTguODggMTUuMjUgMTkuMTg3NUMxNS4yNSAxOS40OTUgMTUuMDg1IDE5Ljc1IDE0Ljg3NSAxOS43NVpNMTYgMjEuODEyNUMxNS41ODc1IDIxLjgxMjUgMTUuMjUgMjEuMjcyNSAxNS4yNSAyMS4wNjI1QzE1LjI1IDIwLjg1MjUgMTUuNTg3NSAyMC42ODc1IDE2IDIwLjY4NzVDMTYuNDEyNSAyMC42ODc1IDE2Ljc1IDIwLjg1MjUgMTYuNzUgMjEuMDYyNUMxNi43NSAyMS4yNzI1IDE2LjQxMjUgMjEuODEyNSAxNiAyMS44MTI1Wk0xNy4xMjUgMTkuNzVDMTYuOTE1IDE5Ljc1IDE2Ljc1IDE5LjQ5NSAxNi43NSAxOS4xODc1QzE2Ljc1IDE4Ljg4IDE2LjkxNSAxOC42MjUgMTcuMTI1IDE4LjYyNUMxNy4zMzUgMTguNjI1IDE3LjUgMTguODggMTcuNSAxOS4xODc1QzE3LjUgMTkuNDk1IDE3LjMzNSAxOS43NSAxNy4xMjUgMTkuNzVaTTE3LjEyNSAxNS45NEMxNy4yMyAxMi4yNDI1IDE4Ljk1NSAxMC40NDI1IDE5LjY2IDEwLjIxQzE5LjcwNSAxMC4zMzc1IDE5Ljc1IDEwLjU3IDE5Ljc1IDEwLjkzNzVDMTkuNzUgMTMuMjc3NSAxOC43NDUgMTUuMjEyNSAxNy45ODc1IDE2LjMzNzVDMTcuNzU1IDE2LjE2NSAxNy40Nzc1IDE2LjAzIDE3LjEyNSAxNS45NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+      "public": true
+    },
+    {
+      "link": "/api/images/tenant/animal-footprint.svg",
+      "title": "Animal footprint",
+      "type": "IMAGE",
+      "subType": "IMAGE",
+      "fileName": "animal-footprint.svg",
+      "publicResourceKey": "KNUpncV265tI6bCKWHysQ0onpKE13Hdb",
+      "mediaType": "image/svg+xml",
+      "data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI1MDBweCIgaGVpZ2h0PSI1MDBweCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwMCA1MDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTM5Ny4zNTQsMTQ4LjkzNWMtMTQuNjg5LDIuMzAxLTI0Ljk4NiwxMDcuMTktMTEuOTksMTIyLjY0OWMxMi45OTQsMTUuNDYxLDQ1LjU3Niw0My4wOTgsOTEuNTUzLDIxLjQ1Mw0KCUM1MjIuODg3LDI3MS4zOTMsNDc2LjMxMywxMzYuNTY2LDM5Ny4zNTQsMTQ4LjkzNXoiLz4NCjxwYXRoIGQ9Ik0xMDIuNzQzLDE0OC43NjljMTQuNjksMi4zMDEsMjQuOTg2LDEwNy4xOSwxMS45OTMsMTIyLjY0OWMtMTIuOTkzLDE1LjQ2MS00NS41NzcsNDMuMS05MS41NTEsMjEuNDUzDQoJQy0yMi43OSwyNzEuMjI5LDIzLjc4NSwxMzYuNDAyLDEwMi43NDMsMTQ4Ljc2OXoiLz4NCjxwYXRoIGQ9Ik0yNzguMDMxLDQwLjI5OWMtMTQuNjg5LDIuMzAxLTI0Ljk4NiwxMDcuMTg4LTExLjk5NCwxMjIuNjQ5YzEyLjk5MiwxNS40Niw0My45NzksMzIuOTgsODkuOTUzLDExLjMzNw0KCUM0MDEuOTYzLDE1Mi42NDIsMzU2Ljk5LDI3LjkzMSwyNzguMDMxLDQwLjI5OXoiLz4NCjxwYXRoIGQ9Ik0yMjQuOTI2LDQwLjEzNGMxNC42ODksMi4zMDEsMjQuOTg1LDEwNy4xODksMTEuOTkzLDEyMi42NWMtMTIuOTkzLDE1LjQ1OS00My45NzgsMzIuOTgxLTg5Ljk1MiwxMS4zMzcNCglDMTAwLjk5MiwxNTIuNDc4LDE0NS45NjcsMjcuNzY3LDIyNC45MjYsNDAuMTM0eiIvPg0KPHBhdGggZD0iTTI1MCwxOTkuNTY0YzM1LDAuMTAzLDgyLjIwMywzOS43NjYsMTAzLjkwNSw2NS4yMTRzNjUuMDM4LDcwLjc4Nyw1NC42OTksMTQwLjI3NEM0MDQsNDM2LDM2NC4yMSw0NjEuOTk2LDM0MS42NjcsNDYxLjk5Ng0KCXMtNzIuOTA1LTExLjMxMS04OC43MTItMTEuMzExYy0xNS44MDcsMC03MC41MjQsMTUuMDE3LTg5LjI2MywxMC43MjZTMTAzLjAyMSw0NDQuMzMzLDk0LjM0NCwzODlzMzcuMzE1LTEwMS4wMzksNjMuMTk5LTEzMC4wODINCglDMjA1LDIwNS42NjcsMjUwLDE5OS41NjQsMjUwLDE5OS41NjR6Ii8+DQo8cGF0aCBzdHJva2U9IiNCRjA0MTEiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMjI5LjY2NywyOTcuNjY3Ii8+DQo8L3N2Zz4NCg==",
+      "public": true
+    },
+    {
+      "link": "/api/images/tenant/animal-not-moving.svg",
+      "title": "animal-not-moving",
+      "type": "IMAGE",
+      "subType": "IMAGE",
+      "fileName": "animal-not-moving.svg",
+      "publicResourceKey": "jK52Fp1VJssavfElsGnHt4iwsA52fCti",
+      "mediaType": "image/svg+xml",
+      "data": "PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iMTYiIGZpbGw9IiM5RTlFOUUiLz4KPHBhdGggZD0iTTE2IDE3LjEyNUMxNC4yNTI1IDE3LjEyNSAxMi43Njc1IDE4LjIyIDEyLjE2NzUgMTkuNzVIMTkuODMyNUMxOS4yMzI1IDE4LjIyIDE3Ljc0NzUgMTcuMTI1IDE2IDE3LjEyNVpNMTIuODY1IDE2TDEzLjY2IDE1LjIwNUwxNC40NTUgMTZMMTUuMjUgMTUuMjA1TDE0LjQ1NSAxNC40MUwxNS4yNSAxMy42MTVMMTQuNDU1IDEyLjgyTDEzLjY2IDEzLjYxNUwxMi44NjUgMTIuODJMMTIuMDcgMTMuNjE1TDEyLjg2NSAxNC40MUwxMi4wNyAxNS4yMDVMMTIuODY1IDE2Wk0xNS45OTI1IDguNUMxMS44NTI1IDguNSA4LjUgMTEuODUyNSA4LjUgMTZDOC41IDIwLjE0NzUgMTEuODUyNSAyMy41IDE1Ljk5MjUgMjMuNUMyMC4xMzI1IDIzLjUgMjMuNSAyMC4xNDc1IDIzLjUgMTZDMjMuNSAxMS44NTI1IDIwLjE0IDguNSAxNS45OTI1IDguNVpNMTYgMjJDMTIuNjg1IDIyIDEwIDE5LjMxNSAxMCAxNkMxMCAxMi42ODUgMTIuNjg1IDEwIDE2IDEwQzE5LjMxNSAxMCAyMiAxMi42ODUgMjIgMTZDMjIgMTkuMzE1IDE5LjMxNSAyMiAxNiAyMlpNMTkuMTM1IDEyLjgyTDE4LjM0IDEzLjYxNUwxNy41NDUgMTIuODJMMTYuNzUgMTMuNjE1TDE3LjU0NSAxNC40MUwxNi43NSAxNS4yMDVMMTcuNTQ1IDE2TDE4LjM0IDE1LjIwNUwxOS4xMzUgMTZMMTkuOTMgMTUuMjA1TDE5LjEzNSAxNC40MUwxOS45MyAxMy42MTVMMTkuMTM1IDEyLjgyWiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==",
+      "public": true
+    },
+    {
+      "link": "/api/images/tenant/animal-ok.svg",
+      "title": "animal-ok",
+      "type": "IMAGE",
+      "subType": "IMAGE",
+      "fileName": "animal-ok.svg",
+      "publicResourceKey": "uHmIRxuiedbvtkN10iFr9KqPhlsHVF0Q",
+      "mediaType": "image/svg+xml",
+      "data": "PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iMTYiIGZpbGw9IiMxQTIzN0UiLz4KPHBhdGggZD0iTTE5LjYzIDE4LjA3NzVDMTkuNDM1IDE3LjkzNSAxOS4xNjUgMTcuNjA1IDE5LjAzNzUgMTcuNDQ3NUMxOS45MyAxNi4xOTUgMjEuMjUgMTMuODQgMjEuMjUgMTAuOTM3NUMyMS4yNSA5LjQ3NSAyMC42OTUgOC42ODc1IDE5Ljc1IDguNjg3NUMxOC41OTUgOC42ODc1IDE2Ljc4IDEwLjIzMjUgMTYgMTMuMTY1QzE1LjIyIDEwLjIzMjUgMTMuNDA1IDguNjg3NSAxMi4yNSA4LjY4NzVDMTEuMzA1IDguNjg3NSAxMC43NSA5LjQ3NSAxMC43NSAxMC45Mzc1QzEwLjc1IDEzLjg0IDEyLjA3IDE2LjE5NSAxMi45NjI1IDE3LjQ0NzVDMTIuODM1IDE3LjYwNSAxMi41NjUgMTcuOTM1IDEyLjM3IDE4LjA3NzVDMTEuOTk1IDE4LjM4NSAxMS4xMjUgMTkuMTA1IDExLjEyNSAyMC4zMTI1QzExLjEyNSAyMS45NyAxMi40Njc1IDIzLjMxMjUgMTQuMTI1IDIzLjMxMjVDMTUuMjg3NSAyMy4zMTI1IDE2IDIyLjg5MjUgMTYgMjIuODkyNUMxNiAyMi44OTI1IDE2LjcxMjUgMjMuMzEyNSAxNy44NzUgMjMuMzEyNUMxOS41MzI1IDIzLjMxMjUgMjAuODc1IDIxLjk3IDIwLjg3NSAyMC4zMTI1QzIwLjg3NSAxOS4xMDUgMjAuMDA1IDE4LjM4NSAxOS42MyAxOC4wNzc1Wk0xNC4wMTI1IDE2LjMzNzVDMTMuMjU1IDE1LjIxMjUgMTIuMjUgMTMuMjc3NSAxMi4yNSAxMC45Mzc1QzEyLjI1IDEwLjU3IDEyLjI5NSAxMC4zMzc1IDEyLjM0IDEwLjIxQzEzLjA0NSAxMC40NDI1IDE0Ljc3IDEyLjI0MjUgMTQuODc1IDE1Ljk0QzE0LjUyMjUgMTYuMDMgMTQuMjQ1IDE2LjE2NSAxNC4wMTI1IDE2LjMzNzVaTTE0Ljg3NSAxOS43NUMxNC42NjUgMTkuNzUgMTQuNSAxOS40OTUgMTQuNSAxOS4xODc1QzE0LjUgMTguODggMTQuNjY1IDE4LjYyNSAxNC44NzUgMTguNjI1QzE1LjA4NSAxOC42MjUgMTUuMjUgMTguODggMTUuMjUgMTkuMTg3NUMxNS4yNSAxOS40OTUgMTUuMDg1IDE5Ljc1IDE0Ljg3NSAxOS43NVpNMTYgMjEuODEyNUMxNS41ODc1IDIxLjgxMjUgMTUuMjUgMjEuMjcyNSAxNS4yNSAyMS4wNjI1QzE1LjI1IDIwLjg1MjUgMTUuNTg3NSAyMC42ODc1IDE2IDIwLjY4NzVDMTYuNDEyNSAyMC42ODc1IDE2Ljc1IDIwLjg1MjUgMTYuNzUgMjEuMDYyNUMxNi43NSAyMS4yNzI1IDE2LjQxMjUgMjEuODEyNSAxNiAyMS44MTI1Wk0xNy4xMjUgMTkuNzVDMTYuOTE1IDE5Ljc1IDE2Ljc1IDE5LjQ5NSAxNi43NSAxOS4xODc1QzE2Ljc1IDE4Ljg4IDE2LjkxNSAxOC42MjUgMTcuMTI1IDE4LjYyNUMxNy4zMzUgMTguNjI1IDE3LjUgMTguODggMTcuNSAxOS4xODc1QzE3LjUgMTkuNDk1IDE3LjMzNSAxOS43NSAxNy4xMjUgMTkuNzVaTTE3LjEyNSAxNS45NEMxNy4yMyAxMi4yNDI1IDE4Ljk1NSAxMC40NDI1IDE5LjY2IDEwLjIxQzE5LjcwNSAxMC4zMzc1IDE5Ljc1IDEwLjU3IDE5Ljc1IDEwLjkzNzVDMTkuNzUgMTMuMjc3NSAxOC43NDUgMTUuMjEyNSAxNy45ODc1IDE2LjMzNzVDMTcuNzU1IDE2LjE2NSAxNy40Nzc1IDE2LjAzIDE3LjEyNSAxNS45NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+      "public": true
+    }
+  ]
+}

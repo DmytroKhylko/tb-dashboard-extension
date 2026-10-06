@@ -1,0 +1,30 @@
+[tools]
+go = "1.27"
+
+[tasks.build]
+description = "Build tbres into dist/"
+run = "go build -trimpath -ldflags='-s -w' -o dist/tbres ./cmd/tbres"
+sources = ["go.mod", "cmd/**/*.go", "internal/**/*.go"]
+outputs = ["dist/tbres"]
+
+[tasks.test]
+description = "Run the test suite"
+run = "go test ./..."
+
+[tasks.check]
+description = "Check formatting, vet and run tests"
+run = [
+  'test -z "$(gofmt -l .)" || { gofmt -l .; echo "run gofmt -w ." >&2; exit 1; }',
+  "go vet ./...",
+  "go test ./...",
+]
+
+[tasks.publish]
+description = "Build and copy tbres into $TBRES_PUBLISH_DIR"
+depends = ["build"]
+run = '''
+: "${TBRES_PUBLISH_DIR:?set TBRES_PUBLISH_DIR, e.g. in mise.local.toml}"
+install -d "$TBRES_PUBLISH_DIR"
+install -m 0755 dist/tbres "$TBRES_PUBLISH_DIR/tbres"
+echo "published $TBRES_PUBLISH_DIR/tbres"
+'''
